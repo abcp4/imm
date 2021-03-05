@@ -258,7 +258,7 @@ def generate_new_color(existing_colors,pastel_factor = 0.5):
 
 def get_n_colors(n, pastel_factor=0.9):
   colors = []
-  for i in xrange(n):
+  for i in range(n):
     colors.append(generate_new_color(colors,pastel_factor = 0.9))
   return colors
 
