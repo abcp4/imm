@@ -426,7 +426,7 @@ def train_loop(opts, graph, loss, train_dataset, training_pl, handle_pl, train_o
       if exclude_vars:
         for exclude_var_name in exclude_vars:
           var_names = [v.name for v in vars_to_restore]
-          reset_vid = [i for i in xrange(len(var_names)) if exclude_var_name in var_names[i]]
+          reset_vid = [i for i in range(len(var_names)) if exclude_var_name in var_names[i]]
           if reset_vid:
             vars_to_restore.pop(reset_vid[0])
       restorer = tf.train.Saver(var_list=vars_to_restore)
